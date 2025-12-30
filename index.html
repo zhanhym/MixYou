@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mix You | Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ✅ FULL PAGE LOADER -->
+  <div id="pageLoader" class="page-loader" aria-live="polite" aria-busy="true">
+    <div class="loader-card">
+      <img class="loader-logo" src="assets/panda-logo.png" alt="Mix You Panda Logo" />
+      <div class="loader-text">Loading menu…</div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="brand-text">
+      <div class="logo-wrap">
+        <img class="logo-img" src="assets/panda-logo.png" alt="Mix You Logo">
+      </div>
+
+      <div class="brand-text">
+        <h1>Mix You</h1>
+        <p>Smoothies • Juice • Ice Cream</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search drinks… (e.g., mango, banana)" />
+      <div class="pill-group">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="noSugar">No Sugar Option</button>
+        <button class="pill" data-filter="healthy">Healthy</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav id="tabs" class="tabs" aria-label="Menu categories"></nav>
+
+    <section class="meta-bar">
+      <div class="meta">
+        <span class="tag">Ice: No / Less / Normal</span>
+        <span class="tag">Sugar: 0% / 30% / 50% / 70% / 100%</span>
+        <span class="tag">Sizes: Small / Medium / Big</span>
+      </div>
+      <div class="small">Prices in RM • Images optional</div>
+    </section>
+
+    <!-- MENU GRID -->
+    <section id="grid" class="grid grid-fade hidden" aria-live="polite"></section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeModal" class="icon-btn">✕</button>
+
+      <div class="modal-body">
+        <div class="modal-img" id="modalImg">🍓</div>
+
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDesc" class="muted"></p>
+
+          <div class="row">
+            <div class="price" id="modalPrice"></div>
+            <div class="badges" id="modalBadges"></div>
+          </div>
+
+          <hr/>
+
+          <div class="options">
+            <div class="opt">
+              <label>Ice level</label>
+              <select id="ice">
+                <option>No Ice</option>
+                <option>Less Ice</option>
+                <option selected>Normal Ice</option>
+              </select>
+            </div>
+
+            <div class="opt">
+              <label>Sugar level</label>
+              <select id="sugar">
+                <option>0%</option>
+                <option>30%</option>
+                <option selected>50%</option>
+                <option>70%</option>
+                <option>100%</option>
+              </select>
+            </div>
+
+            <div class="opt">
+              <label>Size</label>
+              <select id="size">
+                <option>Small</option>
+                <option selected>Medium</option>
+                <option>Big</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="copyOrder" class="btn">Copy Order Text</button>
+          <p class="tiny muted">Tip: paste into WhatsApp / cashier system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Mix You Smoothies Company</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
