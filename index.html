@@ -5,43 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mix You | Menu</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- 🔄 FULL PAGE LOADER -->
-  <div id="pageLoader" class="page-loader" aria-live="polite" aria-busy="true">
-    <div class="loader-card">
-      <img class="loader-logo" src="assets/panda-logo.png" alt="Mix You Panda Logo" />
-      <div class="loader-text">Loading menu…</div>
-    </div>
-  </div>
-
-  <!-- HEADER -->
   <header class="hero">
     <div class="brand-text">
-
       <div class="logo-wrap">
         <img class="logo-img" src="assets/panda-logo.png" alt="Mix You Logo">
       </div>
 
-      <div>
+      <div class="brand-text">
         <h1>Mix You</h1>
         <p>Smoothies • Juice • Ice Cream</p>
       </div>
-
     </div>
 
     <div class="controls">
-      <input
-        id="search"
-        type="search"
-        placeholder="Search drinks… (e.g., mango, banana)"
-      />
+      <input id="search" type="search" placeholder="Search drinks… (e.g., mango, banana)" />
 
-      <!-- ❌ NO copyOrder button here -->
       <div class="pill-group">
         <button class="pill active" data-filter="all">All</button>
         <button class="pill" data-filter="noSugar">No Sugar Option</button>
@@ -50,9 +33,7 @@
     </div>
   </header>
 
-  <!-- MAIN -->
   <main class="container">
-
     <nav id="tabs" class="tabs" aria-label="Menu categories"></nav>
 
     <section class="meta-bar">
@@ -64,16 +45,13 @@
       <div class="small">Prices in RM • Images optional</div>
     </section>
 
-    <!-- MENU GRID -->
-    <section id="grid" class="grid grid-fade hidden" aria-live="polite"></section>
-
+    <section id="grid" class="grid" aria-live="polite"></section>
   </main>
 
   <!-- MODAL -->
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-card">
-
-      <button id="closeModal" class="icon-btn">✕</button>
+      <button id="closeModal" class="icon-btn" type="button">✕</button>
 
       <div class="modal-body">
         <div class="modal-img" id="modalImg">🍓</div>
@@ -120,22 +98,18 @@
             </div>
           </div>
 
-          <!-- ✅ ONLY ONE copyOrder button -->
-          <button id="copyOrder" class="btn">Copy Order Text</button>
+          <!-- ✅ ONLY ONE copy button, ONLY inside modal -->
+          <button id="copyOrder" class="btn" type="button">Copy Order Text</button>
           <p class="tiny muted">Tip: paste into WhatsApp / cashier system.</p>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div>© <span id="year"></span> Mix You Smoothies Company</div>
   </footer>
 
-  <!-- JS -->
   <script src="script.js" defer></script>
-
 </body>
 </html>
