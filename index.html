@@ -307,9 +307,8 @@
             z-index: 1;
         }
         
-        /* BIG LOGOS FIX */
         .smoothie-emoji {
-            height: 250px;
+            height: 200px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
@@ -318,20 +317,21 @@
             overflow: hidden;
         }
         
+        /* Logo styles for menu items */
         .menu-item-logo {
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
         
         .smoothie-card:hover .menu-item-logo {
-            transform: scale(1.08);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         
         .smoothie-content {
@@ -849,12 +849,12 @@
         
         /* Modal product logo */
         .modal-product-logo {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
             border-radius: 50%;
             background: white;
-            padding: 15px;
+            padding: 10px;
         }
         
         .product-price {
@@ -1094,13 +1094,8 @@
             }
             
             .menu-item-logo {
-                width: 140px;
-                height: 140px;
-                padding: 15px;
-            }
-            
-            .smoothie-emoji {
-                height: 230px;
+                width: 100px;
+                height: 100px;
             }
         }
         
@@ -1127,13 +1122,8 @@
             }
             
             .menu-item-logo {
-                width: 120px;
-                height: 120px;
-                padding: 12px;
-            }
-            
-            .smoothie-emoji {
-                height: 210px;
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
@@ -1144,8 +1134,7 @@
         <div class="container">
             <div class="brand-text">
                 <div class="logo-wrap">
-                    <!-- Use Summer Splash as logo placeholder -->
-                    <img class="logo-img" src="./assets/panda-logo.png" alt="Mix You Logo">
+                    <img class="logo-img" src="assets/panda-logo.png" alt="Mix You Logo">
                 </div>
                 <div class="brand-info">
                     <h1 class="brand-name">MIX YOU</h1>
@@ -1198,7 +1187,7 @@
                 <!-- 1. McApple -->
                 <div class="smoothie-card">
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/svqqYHpJ/Mc-Apple.png" alt="McApple Smoothie" class="menu-item-logo">
+                        <img src="assets/McApple.png" alt="McApple Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1218,7 +1207,7 @@
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/Kp8zRKgB/Jade-Rush.png" alt="Jade Rush Smoothie" class="menu-item-logo">
+                        <img src="assets/Jade Rush.png" alt="Jade Rush Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1239,7 +1228,7 @@
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/BHq4Dr3J/Golden-Swirl.png" alt="Golden Swirl Smoothie" class="menu-item-logo">
+                        <img src="assets/Golden Swirl.png" alt="Golden Swirl Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1259,7 +1248,7 @@
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/TxsCMQHM/Berry-Breeze-AKA-BB.png" alt="Berry Breeze Smoothie" class="menu-item-logo">
+                        <img src="assets/Berry Breeze (AKA)BB.png" alt="Berry Breeze Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1279,7 +1268,7 @@
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/k2n8cmT2/Summer-Splash.png" alt="Summer Splash Smoothie" class="menu-item-logo">
+                        <img src="assets/Summer Splash.png" alt="Summer Splash Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1300,7 +1289,7 @@
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
                     <div class="smoothie-emoji">
-                        <img src="https://i.ibb.co/wZH8Srct/Golden-Glow.png" alt="Golden Glow Smoothie" class="menu-item-logo">
+                        <img src="assets/Golden Glow.png" alt="Golden Glow Smoothie" class="menu-item-logo">
                     </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
@@ -1533,7 +1522,7 @@
             <div class="modal-body">
                 <div class="modal-product">
                     <div class="product-emoji">
-                        <img src="https://i.ibb.co/svqqYHpJ/Mc-Apple.png" alt="Product" class="modal-product-logo">
+                        <img src="assets/McApple.png" alt="Product" class="modal-product-logo">
                     </div>
                     <div>
                         <h4 id="modalProductName">McApple</h4>

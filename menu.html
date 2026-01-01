@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Smoothie Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-start;
+        }
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .item-info {
+            flex: 1;
+        }
+        .item-title {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+        .item-price {
+            font-size: 20px;
+            color: #d35400;
+            margin: 5px 0;
+        }
+        .item-description {
+            color: #666;
+            margin: 10px 0;
+        }
+        .tags {
+            margin: 10px 0;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .order-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .order-btn:hover {
+            background-color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-item">
+        <img src="banana-smoothie.jpg" alt="Banana Smoothie">
+        <div class="item-info">
+            <h2 class="item-title">Banana Smoothie</h2>
+            <p class="item-price">RM 5.00</p>
+            <p class="item-description">Classic banana blend made with real fruits. Perfect creamy texture with natural sweetness.</p>
+            <div class="tags">
+                <span class="tag">noSugar</span>
+                <span class="tag">classic</span>
+                <span class="tag">popular</span>
+            </div>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="mcapple.jpg" alt="McApple">
+        <div class="item-info">
+            <h2 class="item-title">McApple</h2>
+            <p class="item-price">RM 5.00</p>
+            <p class="item-description">Apple freshness blended with banana smoothness. A perfect balance of sweet and tangy.</p>
+            <div class="tags">
+                <span class="tag">noSugar</span>
+                <span class="tag">refreshing</span>
+            </div>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="jade-rush.jpg" alt="Jade Rush">
+        <div class="item-info">
+            <h2 class="item-title">Jade Rush</h2>
+            <p class="item-price">RM 6.00</p>
+            <p class="item-description">Tangy kiwi with crisp apple. Packed with Vitamin C and antioxidants for a healthy boost.</p>
+            <div class="tags">
+                <span class="tag">noSugar</span>
+                <span class="tag">healthy</span>
+                <span class="tag">popular</span>
+            </div>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </div>
+
+</body>
+</html>
