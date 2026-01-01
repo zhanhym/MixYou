@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Fix</title>
+    <style>
+        img { width: 200px; margin: 10px; border: 2px solid red; }
+    </style>
+</head>
+<body>
+    <h1>Testing Images</h1>
+    
+    <h2>Test 1: Golden Swirl</h2>
+    <img src="./assets/Golden Swirl .png" alt="Test 1">
+    
+    <h2>Test 2: With ./ path</h2>
+    <img src="./assets/Golden Swirl .png" alt="Test 2">
+    
+    <h2>Test 3: Absolute from root</h2>
+    <img src="/assets/Golden Swirl .png" alt="Test 3">
+    
+    <script>
+        // Check which images load
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = () => console.log('Failed:', img.src);
+            img.onload = () => console.log('Loaded:', img.src);
+        });
+    </script>
+</body>
+</html>
