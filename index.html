@@ -313,7 +313,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Logo styles for menu items */
+        .menu-item-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .smoothie-card:hover .menu-item-logo {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         
         .smoothie-content {
@@ -819,7 +837,6 @@
         }
         
         .product-emoji {
-            font-size: 4rem;
             width: 100px;
             height: 100px;
             display: flex;
@@ -827,6 +844,17 @@
             justify-content: center;
             background: var(--light);
             border-radius: 20px;
+            padding: 10px;
+        }
+        
+        /* Modal product logo */
+        .modal-product-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 10px;
         }
         
         .product-price {
@@ -1064,6 +1092,11 @@
             .modal-content {
                 margin: 10px;
             }
+            
+            .menu-item-logo {
+                width: 100px;
+                height: 100px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1087,6 +1120,11 @@
             .toppings-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .menu-item-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
@@ -1096,7 +1134,6 @@
         <div class="container">
             <div class="brand-text">
                 <div class="logo-wrap">
-                    <!-- Replace panda-logo.png with your logo -->
                     <img class="logo-img" src="assets/panda-logo.png" alt="Mix You Logo">
                 </div>
                 <div class="brand-info">
@@ -1147,28 +1184,11 @@
             <p class="section-subtitle">Fresh, healthy smoothies made with real fruits without preservatives</p>
             
             <div class="menu-grid">
-                <!-- Banana Smoothie -->
+                <!-- 1. McApple -->
                 <div class="smoothie-card">
-                    <div class="badge">🔥 Popular</div>
-                    <div class="smoothie-emoji">🍌</div>
-                    <div class="smoothie-content">
-                        <div class="smoothie-header">
-                            <h3 class="smoothie-name">Banana Smoothie</h3>
-                            <div class="smoothie-price">RM 5.00</div>
-                        </div>
-                        <p class="smoothie-desc">Classic banana blend made with real fruits. Perfect creamy texture with natural sweetness.</p>
-                        <div class="smoothie-tags">
-                            <span class="tag">noSugar</span>
-                            <span class="tag">classic</span>
-                            <span class="tag">popular</span>
-                        </div>
-                        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+                    <div class="smoothie-emoji">
+                        <img src="assets/McApple.png" alt="McApple Smoothie" class="menu-item-logo">
                     </div>
-                </div>
-
-                <!-- McApple -->
-                <div class="smoothie-card">
-                    <div class="smoothie-emoji">🍎</div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
                             <h3 class="smoothie-name">McApple</h3>
@@ -1183,10 +1203,12 @@
                     </div>
                 </div>
 
-                <!-- Jade Rush -->
+                <!-- 2. Jade Rush -->
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
-                    <div class="smoothie-emoji">🥝</div>
+                    <div class="smoothie-emoji">
+                        <img src="assets/Jade Rush.png" alt="Jade Rush Smoothie" class="menu-item-logo">
+                    </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
                             <h3 class="smoothie-name">Jade Rush</h3>
@@ -1202,9 +1224,12 @@
                     </div>
                 </div>
 
-                <!-- Golden Swirl -->
+                <!-- 3. Golden Swirl -->
                 <div class="smoothie-card">
-                    <div class="smoothie-emoji">🍍</div>
+                    <div class="badge">🔥 Popular</div>
+                    <div class="smoothie-emoji">
+                        <img src="assets/Golden Swirl.png" alt="Golden Swirl Smoothie" class="menu-item-logo">
+                    </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
                             <h3 class="smoothie-name">Golden Swirl</h3>
@@ -1219,10 +1244,12 @@
                     </div>
                 </div>
 
-                <!-- Berry Breeze -->
+                <!-- 4. Berry Breeze -->
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
-                    <div class="smoothie-emoji">🫐</div>
+                    <div class="smoothie-emoji">
+                        <img src="assets/Berry Breeze (AKA)BB.png" alt="Berry Breeze Smoothie" class="menu-item-logo">
+                    </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
                             <h3 class="smoothie-name">Berry Breeze (BB)</h3>
@@ -1237,10 +1264,12 @@
                     </div>
                 </div>
 
-                <!-- Summer Splash -->
+                <!-- 5. Summer Splash -->
                 <div class="smoothie-card">
                     <div class="badge">🔥 Popular</div>
-                    <div class="smoothie-emoji">🍉</div>
+                    <div class="smoothie-emoji">
+                        <img src="assets/Summer Splash.png" alt="Summer Splash Smoothie" class="menu-item-logo">
+                    </div>
                     <div class="smoothie-content">
                         <div class="smoothie-header">
                             <h3 class="smoothie-name">Summer Splash</h3>
@@ -1251,6 +1280,27 @@
                             <span class="tag">hydrating</span>
                             <span class="tag">refreshing</span>
                             <span class="tag">popular</span>
+                        </div>
+                        <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- 6. Golden Glow -->
+                <div class="smoothie-card">
+                    <div class="badge">🔥 Popular</div>
+                    <div class="smoothie-emoji">
+                        <img src="assets/Golden Glow.png" alt="Golden Glow Smoothie" class="menu-item-logo">
+                    </div>
+                    <div class="smoothie-content">
+                        <div class="smoothie-header">
+                            <h3 class="smoothie-name">Golden Glow</h3>
+                            <div class="smoothie-price">RM 6.50</div>
+                        </div>
+                        <p class="smoothie-desc">Turmeric and ginger blend with orange and carrot. Anti-inflammatory and immune-boosting.</p>
+                        <div class="smoothie-tags">
+                            <span class="tag">healthy</span>
+                            <span class="tag">immuneboost</span>
+                            <span class="tag">energizing</span>
                         </div>
                         <button class="order-btn"><i class="fas fa-shopping-cart"></i> Order Now</button>
                     </div>
@@ -1471,10 +1521,12 @@
             </div>
             <div class="modal-body">
                 <div class="modal-product">
-                    <div class="product-emoji">🍌</div>
+                    <div class="product-emoji">
+                        <img src="assets/McApple.png" alt="Product" class="modal-product-logo">
+                    </div>
                     <div>
-                        <h4 id="modalProductName">Banana Smoothie</h4>
-                        <p id="modalProductDesc">Classic banana blend made with real fruits</p>
+                        <h4 id="modalProductName">McApple</h4>
+                        <p id="modalProductDesc">Apple freshness blended with banana smoothness</p>
                         <div class="product-price" id="modalProductPrice">RM 5.00</div>
                     </div>
                 </div>
@@ -1612,8 +1664,21 @@
                 // Get filter type
                 const filterType = this.textContent.toLowerCase();
                 
-                // Here you would filter the smoothies
-                console.log('Filtering by:', filterType);
+                // Filter the smoothies
+                const cards = document.querySelectorAll('.smoothie-card');
+                cards.forEach(card => {
+                    const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                    
+                    if (filterType.includes('all')) {
+                        card.style.display = 'block';
+                    } else if (filterType.includes('healthy')) {
+                        card.style.display = tags.includes('healthy') || tags.includes('antioxidants') || tags.includes('immuneboost') ? 'block' : 'none';
+                    } else if (filterType.includes('no sugar')) {
+                        card.style.display = tags.includes('nosugar') ? 'block' : 'none';
+                    } else if (filterType.includes('popular')) {
+                        card.style.display = tags.includes('popular') ? 'block' : 'none';
+                    }
+                });
             });
         });
 
@@ -1623,14 +1688,19 @@
                 const card = this.closest('.smoothie-card');
                 const name = card.querySelector('.smoothie-name').textContent;
                 const price = card.querySelector('.smoothie-price').textContent;
-                const emoji = card.querySelector('.smoothie-emoji').textContent;
+                const logo = card.querySelector('.menu-item-logo').src;
                 const desc = card.querySelector('.smoothie-desc').textContent;
                 
                 // Update modal content
                 document.getElementById('modalProductName').textContent = name;
                 document.getElementById('modalProductDesc').textContent = desc;
                 document.getElementById('modalProductPrice').textContent = price;
-                document.querySelector('.product-emoji').textContent = emoji;
+                
+                // Update modal logo
+                const modalLogo = document.querySelector('.modal-product-logo');
+                modalLogo.src = logo;
+                modalLogo.alt = name;
+                
                 document.getElementById('totalPrice').textContent = price;
                 document.getElementById('summaryDetails').innerHTML = `<p>Base price: ${price}</p>`;
                 
@@ -1765,6 +1835,9 @@
                 card.style.display = matches ? 'block' : 'none';
             });
         });
+
+        // Initialize
+        updateOrderSummary();
     </script>
 </body>
 </html>
